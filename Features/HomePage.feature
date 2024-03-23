@@ -23,4 +23,4 @@ Feature: Landing onto Homepage
 
     Scenario: User validate the Page
       Then I click on TrainTickets
-      Then I should validate TrainTicket Homepage
+      Then I should be on the TrainTicket Homepage

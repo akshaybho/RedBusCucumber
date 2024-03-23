@@ -21,9 +21,9 @@ public class TrainPageStepDef extends BaseClass {
         tp.clickOnTrainBtn();
         log.info("User clicks on train ticket");
     }
-    @Then("I should validate TrainTicket Homepage")
-    public void i_should_validate_train_ticket_homepage() {
 
+    @Then("I should be on the TrainTicket Homepage")
+    public void i_should_be_on_the_train_ticket_homepage() {
         TrainPage tp = new TrainPage(testdriver.driver);
         tp.verifyPage();
         log.info("User validate the train ticket Homepage");
