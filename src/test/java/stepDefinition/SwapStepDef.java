@@ -1,12 +1,12 @@
 package stepDefinition;
 
-import io.cucumber.java.en.And;
+import base.BaseClass;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import pageObjects.SwappingPage;
 import utils.TestContextSetup;
 
-public class SwapStepDef {
+public class SwapStepDef extends BaseClass {
 
     SwappingPage sp;
     TestContextSetup testdriver;
@@ -21,6 +21,7 @@ public class SwapStepDef {
 
         sp = new SwappingPage(testdriver.driver);
         sp.clickOntoBox();
+        log.info("User clicks on second dropdown box");
 
     }
     @Then("I swap the cities")
@@ -28,6 +29,7 @@ public class SwapStepDef {
 
         sp = new SwappingPage(testdriver.driver);
         sp.clickOnSwap();
+        log.info("User swapping the cities");
 
     }
     @Then("I validate cities are swapping")
@@ -35,6 +37,7 @@ public class SwapStepDef {
 
         sp = new SwappingPage(testdriver.driver);
         sp.verifySwap();
+        log.info("User is able to validate the swap");
     }
 
     @Then("I search {string} in ToBox dropdown")
@@ -43,5 +46,6 @@ public class SwapStepDef {
         sp = new SwappingPage(testdriver.driver);
         sp.clickOntoBox();
         sp.searchLocation(toName);
+        log.info("User search the destination location");
     }
 }

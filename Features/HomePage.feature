@@ -20,3 +20,7 @@ Feature: Landing onto Homepage
     Then I search "Solapur" in ToBox dropdown
     Then I swap the cities
     Then I validate cities are swapping
+
+    Scenario: User validate the Page
+      Then I click on TrainTickets
+      Then I should validate TrainTicket Homepage
