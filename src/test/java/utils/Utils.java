@@ -1,6 +1,10 @@
 package utils;
 
+import org.openqa.selenium.WebElement;
+
 import java.io.FileInputStream;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Properties;
 
 public class Utils {
@@ -20,5 +24,15 @@ public class Utils {
         {
             e.printStackTrace();
         }
+    }
+
+    public void tomorrowDate(WebElement datePicker)
+    {
+        LocalDate today = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate tomorrow = today.plusDays(1);
+        String formattedTomorrow = tomorrow.format(formatter);
+
+        datePicker.sendKeys(formattedTomorrow);
     }
 }

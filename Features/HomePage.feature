@@ -21,6 +21,11 @@ Feature: Landing onto Homepage
     Then I swap the cities
     Then I validate cities are swapping
 
-    Scenario: User validate the Page
-      Then I click on TrainTickets
-      Then I should be on the TrainTicket Homepage
+  Scenario: User validate the Page
+    Then I click on TrainTickets
+    Then I should be on the TrainTicket Homepage
+
+  Scenario: User select the next day
+    Then I click on calendar
+    And select date for next day
+

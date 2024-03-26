@@ -9,8 +9,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {".//Features/HomePage.feature"},
         glue = "stepDefinition",
-        dryRun = true,
-        monochrome = true
+        dryRun = false,
+        monochrome = true,
+        plugin = {"pretty", "html:target/cucumber-reports/reports.html"}
 )
 public class Runner {
 
